@@ -1,0 +1,136 @@
+/* CSS Document demo */
+/*   Created and mantained by Lionface Team 2010    */
+body {
+    margin:0px; 
+    padding:0px; 
+    font: 1.0em verdana, arial, sans-serif;
+}
+
+div#container {
+    position:relative; 
+    min-width:800px; 
+    max-width:1000px; 
+    margin-left:auto; 
+    margin-right:auto; 
+    background-color:#ECf2C9
+}
+
+/*styles for header - text-align centers graphic */
+div#header {
+    height:60px; 
+    background-color:#FFC; 
+    text-align:center; 
+    border-bottom: 1px #960 solid;
+}
+
+div#nav {
+    position:absolute; 
+    left:0px; 
+    top:60px; 
+    width:150px;
+    padding:0; 
+    margin:22px 0 15px 0;
+}			
+
+div#nav ul {
+    border:0; 
+    margin:12px 1.25em 12px 1.25em; 
+    padding:0; 
+    list-style-type:none; 
+    font-weight:bold; 
+    font-size:.75em;
+}
+
+div#nav li {
+    border-bottom:2px dotted #960; 
+    margin:0; 
+    padding:.3em 0; 
+    text-indent:.5em
+}
+
+div#nav li:first-child {
+    border-top:2px dotted #960;
+}
+
+div#nav a {
+    text-decoration:none; 
+    color:#C60;
+}
+
+div#nav a:hover {
+    color: #960;
+}
+/* a hack for IE Win only \*/	
+* html div#nav ul {
+    border-top:2px dotted #960;
+}
+/*end of hack */
+
+div#content {
+    margin:20px 156px 0 150px; 
+    padding: 0 1em;
+}
+
+div#content div#mainimage {
+    width:180px; 
+    float:left; 
+    margin:0 8px 4px 0;
+}
+
+div#content div#mainimage img {
+    border: 1px solid #960;
+}
+
+div#content div#mainimage p {
+    font-size:.65em; 
+    margin:0px 5px; 
+    color:#C60;
+} 
+
+div#content h1 {
+    font-size:1.4em; 
+    font-variant:small-caps; 
+    margin-top:2em; 
+    font-family:'comic sans MS', verdana, sans-serif; 
+    color:#960;
+}
+
+div#content p {font-size:.8em; margin-top:0; margin-bottom:.5em;}	
+div#content li {font-size:.75em;}
+div#content blockquote {width: 250px; float:right; font-size:.7em; border-top: 3px dotted #960; border-bottom:2px dotted #960; margin:0 10px; padding: 6px 10px;}
+div#content blockquote p {margin:0; font-style:italic;}
+div#content a {text-decoration:underline; color:#C60;}
+div#content a:hover {color: #960; text-decoration:none;}
+div#rightcolumn {position:absolute; width:156px; top:60px; right:0px;  
+		margin:32px 0 0 0; padding:1em  0; border-top:2px solid #960; border-bottom:1px solid #960;}
+div#rightcolumn p {font-size:.75em;}
+div#rightcolumn img {border:none;}
+div#rightcolumn div#newslinks ul {list-style-type:none; font-size:.7em; padding-left: 10px; margin:0 6px 0 0;}
+div#rightcolumn div#newslinks li {margin-top:0; margin-bottom:.5em;}
+div#rightcolumn h3 {text-align:center; font-size:.8em; color:#960; margin-bottom:0px; padding-top:3px; border-top: 2px dotted #960;}
+div#rightcolumn a {text-decoration:none; color:#C60; text-decoration:underline}
+div#rightcolumn a:hover {color: #960; text-decoration: none;}
+div#rightcolumn li.morelink {font-style:italic;}
+
+/*footer styles*/
+div#footer {width:100%;  /* makes the div fill its container - usually body */
+ 					padding:4px 0; /* pushes the links away from top and bottom of the div */
+					font-size:.9em;  /* sets the font size of all links */
+					text-align:center; /* centers the ul elements in the div */
+					background-color:#DEE7B6; /* sets the background color of the div */
+					border-top:1px solid #960; border-bottom:2px solid #960; margin-top:1.5em;}
+ div#footer ul {margin:2px 0;} /* vertical spacing between the lists */
+ div#footer li {display:inline; /* the key CSS - makes the lists display horizontally */
+						color:white; /* sets the color of the vertical lines */
+						border-left:1px solid; /* creates the vertical line to the left of each list items */
+						color:#C60; /* sets the color of the vertical lines  - links colored below */
+						padding:0 5px 0 9px; /* horiz space between links and vert lines - needed diff l & r values to center */
+						}
+ div#footer li:first-child {border-left:0;} /* removes the left border of the first list item - IDWIMIE */
+ div#footer ul li a {text-decoration:none; /* removes the underlining off the links */
+ 							 color:C60; /* the color of the links */
+							 }
+ div#footer ul li a:hover {text-decoration:underline; color:#960} /* underlines the links when hovered */
+ div#footer ul.fineprint li {color:#C60;} /* color for copyright and vert dividers on last row */
+ div#footer ul.fineprint li a {color:#C60;} /* had to explicitly color these or they inherit white from div#footer li */
+  div#footer ul.fineprint li a:hover {color:#960;} /* turns bottom row white when hovered */

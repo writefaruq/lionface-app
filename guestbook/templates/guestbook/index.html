@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Recent Guestbook Entries</h2>
+  {% for greeting in greetings %}
+    {% if greeting.author %}
+      <b>{{ greeting.author.username }}</b> wrote:
+    {% else %}
+      An anonymous person wrote:
+    {% endif %}
+    <p>{{ greeting.content|escape }}</p>
+  {% endfor %}
+
+  <form action="/guestbook/sign" method="post">{% csrf_token %}
+    <table>{{ form }}</table>
+    <input type="submit" value="Sign Guestbook" />
+  </form>
+{% endblock %}

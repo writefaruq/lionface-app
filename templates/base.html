@@ -1,0 +1,75 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{% block title %}Lionface - Social networking for the world in need{% endblock %}</title>
+    <link type="text/css" rel="stylesheet" href="/media/main.css" />
+</head>
+
+<body>
+<div id="mainwrapper">
+ <div id="header">
+      <a href="/accounts/create_user/">Create User</a>
+      Hello
+      {% if user.is_authenticated %}
+        {{ user.username }}
+        [<a href="{% url django.contrib.auth.views.logout %}">sign out</a>]
+      {% else %}
+        World!
+        [<a href="{% url django.contrib.auth.views.login %}">sign in</a>]
+      {% endif %}
+  </div>
+<div id="columnswrapper">
+<div id="columnswrapper">
+<div id="content">
+<div id="contentinner"><!--this wrapper allows me to user margins to create the effect of padding without using padding and invoking the box model problems--> 
+  <h1>The Lionface...</h1>
+  
+  <p> Nick Douglas revolutioned the world of social networking... <br>
+    More news----
+  </p>  
+   <h1>Add your comments on Lionface...</h1>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+ </div><!--end of contentinner-->
+</div><!--end of content div-->
+<div id="nav">
+	<ul>
+     <li><a href="#">Profile</a></li>
+     <li><a href="#">Place</a></li>
+     <li><a href="#">Event</a></li>
+     <li><a href="#">Related Links</a></li>     
+    </ul>
+ 
+</div>
+<div id="rightcolumn">
+  <div id="newslinks">
+  <h3>Lionface News</h3>
+  <ul>
+  <li><a href="#">"Lionface news</a></li>
+  <li><a href="#">Coming soon</a></li>
+  <li class="morelink"><a href="#">more news</a></li>
+  </ul>
+  </div><!--end of newslinks-->
+</div><!--end of rightcolumn div-->
+</div><!--end of columnswrapper-->
+<div class="clearthis"><!--the clearing div to force the footer under the columns--></div>
+<div id="footer">
+	<ul>
+     <li><a href="#">Profile</a></li>
+     <li><a href="#">Place</a></li>
+     <li><a href="#">Event</a></li>
+     <li><a href="#">Related Links</a></li>     
+    </ul>
+   <ul class="fineprint">
+    <li>&copy; 2010 Linonface</li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">terms of use</a></li>
+    </ul>
+</div>
+
+</div><!--end mainwrapper-->
+</body>
+</html>
